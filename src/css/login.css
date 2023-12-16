@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/tracktors.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: white;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00000075;
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+}
+.container .form h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+  width: 100%;
+}
+.container .form form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+.container .form form div a {
+  font-size: 0.8rem;
+  align-self: end;
+  color: #ffae07;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  transition: 0.3s ease color;
+}
+.container .form form div a:hover,
+.container .form form p a:hover {
+  color: #fff;
+}
+.container .form form div label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.container .form form div input {
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  margin-top: 2px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.container .form form div input:focus {
+  border: 2px solid #ffae07;
+}
+.container .form form p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.container .form form p a {
+  color: #ffae07;
+  transition: 0.3s ease color;
+  font-weight: 600;
+}
+.container .form form input[type="submit"] {
+  padding: 5px 10px;
+  width: 50%;
+  margin-top: 5px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+  border: 2px solid transparent;
+}
+.container .form form input[type="submit"]:hover {
+  background-color: #ffae07;
+  color: #fff;
+}
+
+.container .form form input[type="submit"]:active {
+  border: 2px solid #fff;
+}
+
+@media (width <=370px) {
+  .container .form {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+@media (width <=570px) {
+  .container .form {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+@media  (height <= 600px) {
+  .container .form {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: auto;
+  }
+  .container .form form {
+    width: 60%;
+  }
+  .container .form form input[type="submit"] {
+    width: 40%;
+  }
+}

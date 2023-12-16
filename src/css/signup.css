@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/Digger.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+form div label {
+  display: block;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.form {
+  background-color: #00000096;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form h3 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: #fff;
+  width: 23rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+form div {
+  margin-top: 1rem;
+}
+form div input {
+  border-radius: 5px;
+  width: 300px;
+  padding: 2px 10px;
+  margin-top: 2px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+form div input:focus {
+  outline: 2px solid #db9300;
+}
+form p {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  color: white;
+  text-align: center;
+}
+form p a {
+  color: #ff9900;
+  transition: 0.5s ease all;
+}
+form p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+form input[value="Sign up"] {
+  border-radius: 10px;
+  padding: 6px 35px;
+  font-weight: 600;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.7s ease all;
+  outline: 2px solid transparent;
+}
+form input[value="Sign up"]:hover {
+  background-color: #ff9900;
+  color: #fff;
+}
+form input[value="Sign up"]:focus,
+form input[value="Sign up"]:active {
+  background-color: #ff9900;
+  color: #fff;
+  outline: 2px solid #fff;
+}
+
+@media (max-width: 575px) {
+  .form,
+  .form h3 {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .form h3 {
+    margin-bottom: 0;
+    width: 70%;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  form {
+    width: 60%;
+  }
+  form div input {
+    width: 100%;
+    padding: 4px 10px;
+  }
+  form div {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+  }
+  form p {
+    margin: 15px 0 15px;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 576px) {
+  .form,
+  .form h3 {
+    overflow: auto;
+  }
+  .form {
+    width: 100%;
+  }
+  .form h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    width: 60%;
+  }
+  form div {
+    margin-top: 0.2rem;
+  }
+  form p {
+    margin: 9px 0 5px;
+    font-size: 0.7rem;
+  }
+  form div label {
+    font-size: 1rem;
+  }
+  form div input {
+    width: 250px;
+    padding: 3px 10px;
+  }
+  form input[value="Sign up"] {
+    font-size: 0.7rem;
+    padding: 4px 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 100%;
+  }
+  form div label {
+    font-size: 1rem;
+  }
+  form p {
+    font-size: 0.75rem;
+  }
+  form input[value="Sign up"] {
+    font-size: 0.85rem;
+    padding: 4px 35px;
+  }
+  .form h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    width: 19rem;
+  }
+}
+@media (min-width: 992px) {
+  .form {
+    width: 50%;
+  }
+  form div label {
+    font-size: 1rem;
+  }
+  form div input {
+    width: 300px;
+    padding: 6px 10px;
+  }
+  form p {
+    margin: 20px 0 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .form {
+    width: 40%;
+  }
+}
+@media (min-width: 1400px) {
+  .form {
+    width: 30%;
+  }
+}
+
+@media (height < 600px) {
+  form div label {
+    font-size: 0.8rem;
+  }
+  .form h3 {
+    margin-bottom: 0;
+    font-size: 1rem;
+    width: 70%;
+  }
+  form div input {
+    width: 240px;
+    padding: 1px 8px;
+  }
+  form input[value="Sign up"] {
+    padding: 2px 30px;
+    border-radius: 8px;
+}
+
+}
