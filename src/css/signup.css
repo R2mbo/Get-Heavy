@@ -77,7 +77,7 @@ form p a:hover {
   color: white;
   text-decoration: underline;
 }
-form input[value="Sign up"] {
+form input[type="submit"] {
   border-radius: 10px;
   padding: 6px 35px;
   font-weight: 600;
@@ -87,12 +87,12 @@ form input[value="Sign up"] {
   transition: 0.7s ease all;
   outline: 2px solid transparent;
 }
-form input[value="Sign up"]:hover {
+form input[type="submit"]:hover {
   background-color: #ff9900;
   color: #fff;
 }
-form input[value="Sign up"]:focus,
-form input[value="Sign up"]:active {
+form input[type="submit"]:focus,
+form input[type="submit"]:active {
   background-color: #ff9900;
   color: #fff;
   outline: 2px solid #fff;
@@ -155,7 +155,7 @@ form input[value="Sign up"]:active {
     width: 250px;
     padding: 3px 10px;
   }
-  form input[value="Sign up"] {
+  form input[type="submit"] {
     font-size: 0.7rem;
     padding: 4px 35px;
   }
@@ -171,7 +171,7 @@ form input[value="Sign up"]:active {
   form p {
     font-size: 0.75rem;
   }
-  form input[value="Sign up"] {
+  form input[type="submit"] {
     font-size: 0.85rem;
     padding: 4px 35px;
   }
@@ -220,7 +220,7 @@ form input[value="Sign up"]:active {
     width: 240px;
     padding: 1px 8px;
   }
-  form input[value="Sign up"] {
+  form input[type="submit"] {
     padding: 2px 30px;
     border-radius: 8px;
 }
