@@ -3,14 +3,32 @@ let hideBtn = document.getElementById("bars-exit")
 let mobileList = document.getElementsByClassName("mobile-list")[0];
 let categoryMobile = document.getElementById("cat");
 let dropMobile = document.getElementById("drop-mobile")
+let pageBody = document.querySelector("body")
 
 
-// ! View & Hide the Mobile Sidebar
+
+// ! View & Hide the Mobile Sidebar + add overflow to the body
 showBtn.addEventListener("click", function () {
     mobileList.classList.add("visible")
     mobileList.classList.add("right")
     showBtn.style.setProperty("display", "none")
     hideBtn.style.setProperty("display", "flex")
+    if (window.innerWidth < 576 || window.outerWidth < 576) {
+        pageBody.classList.add("no_scroll_open");
+    }
+})
+// ! Checking for the size of screen
+window.onresize = function () {
+    if ((this.innerWidth < 576 || this.outerWidth < 576) && mobileList.classList.contains("visible")) {
+        pageBody.classList.add("no_scroll_open");
+    } else {
+        pageBody.classList.remove("no_scroll_open");
+    }
+}
+
+//  ! removes the overflow hidden from the body
+hideBtn.addEventListener("click", function () {
+    pageBody.classList.remove("no_scroll_open");
 })
 // ! View & Hide The Category Drop Down List
 categoryMobile.addEventListener("click", function () {
@@ -36,6 +54,7 @@ document.addEventListener("click", function (e) {
             document.querySelector("#cat svg").classList.remove("fill");
             showBtn.style.setProperty("display", "flex")
             hideBtn.style.setProperty("display", "none")
+            pageBody.classList.remove("no_scroll_open");
         } else {
             mobileList.classList.remove("visible")
             mobileList.classList.remove("right")
@@ -44,6 +63,7 @@ document.addEventListener("click", function (e) {
             document.querySelector("#cat svg").classList.remove("fill");
             showBtn.style.setProperty("display", "flex")
             hideBtn.style.setProperty("display", "none")
+            pageBody.classList.remove("no_scroll_open");
         }
     }
     // ! Check if the click is inside the category list  

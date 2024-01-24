@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,14 +10,17 @@
   list-style: none;
   text-decoration: none;
 }
+
 ::selection {
   background-color: transparent;
 }
+
 h1::selection,
 p::selection {
   background-color: #0a0908;
   color: #ffffff;
 }
+
 .arrow a {
   position: fixed;
   display: flex;
@@ -25,9 +32,11 @@ p::selection {
   font-size: 1.3rem;
   cursor: pointer;
 }
+
 .arrow a span {
   margin-left: 6px;
 }
+
 .arrow a svg {
   width: 20px;
   height: 30px;
@@ -42,13 +51,16 @@ p::selection {
   background-color: black;
   color: white;
   width: 240px;
+  height: 100vh;
 }
+
 .main ul {
   position: sticky;
   top: 8rem;
   margin-top: 8rem;
   width: 100%;
 }
+
 .main ul li {
   margin: 25px 0;
   padding: 10px 15px;
@@ -60,14 +72,20 @@ p::selection {
   transition-property: background-color, color;
   width: 80%;
 }
+
 .main .container {
   margin: auto;
+  width: 100%;
 }
+
 .main .container .content {
   padding-top: 2.5rem;
   margin: auto;
   padding-bottom: 10rem;
+  height: 100vh;
+  overflow: auto;
 }
+
 .main .container .content h1 {
   margin-bottom: 3rem;
   text-align: center;
@@ -84,12 +102,15 @@ p::selection {
   height: 300px;
   overflow: hidden;
 }
+
 .main .container .content .items .item img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 60%;
   transition: 0.4s ease transform;
+  width: 100%;
 }
+
 .main .container .content .items .item img:hover {
   transform: scale(1.1);
 }
@@ -101,6 +122,7 @@ p::selection {
   font-weight: 600;
   font-size: 1.2rem;
 }
+
 .main .container .content .items .item a {
   background: #0a0908;
   padding: 6px 11px;
@@ -109,64 +131,79 @@ p::selection {
   transition-property: color, background-color;
   transition: 0.4s ease;
 }
+
 .main .container .content .items .item a:hover {
   color: #faac0f;
   background-color: #000000;
 }
+
 .focused {
   background-color: white;
   color: black;
   transition: 0.4s ease;
   transition-property: background-color, color;
 }
+
 @media (max-width: 576px) {
   .arrow a {
     font-size: 1rem;
   }
+
   .arrow a svg {
     width: 15px;
     height: 15px;
   }
+
   .main .container .content .items {
     display: grid;
-    grid-template-columns: 90%;
+    grid-template-columns: minmax(190px, 70%);
     row-gap: 40px;
     justify-content: center;
   }
+
   .main .container .content .items .item {
     width: 85%;
   }
+
   h1 {
     font-size: 1.5rem;
   }
+
   .main .container .content .items .item p,
   .main .container .content .items .item a {
     font-size: 1rem;
   }
+
   .main .list {
-    width: 150px;
+    width: 60vw;
   }
+
   .main ul {
     margin-top: 0;
     top: 3.5rem;
   }
+
   .main ul li {
     margin: 10px 0px;
     padding: 8px 10px;
     font-size: 0.8rem;
   }
+
   .main .container .content .items .item {
     height: 230px;
   }
+
   .main .container .content .items .item p,
   .main .container .content .items .item a {
     margin-top: 1rem;
   }
 }
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
   }
+
   .main .container .content .items {
     display: grid;
     grid-template-columns: 250px;
@@ -174,10 +211,12 @@ p::selection {
     justify-content: center;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     width: 720px;
   }
+
   .main .container .content .items {
     display: grid;
     grid-template-columns: 250px 250px;
@@ -185,10 +224,12 @@ p::selection {
     row-gap: 40px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     width: 960px;
   }
+
   .main .container .content .items {
     display: grid;
     grid-template-columns: 285px 285px;
@@ -201,6 +242,7 @@ p::selection {
   .container {
     width: 1140px;
   }
+
   .main .container .content .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -213,6 +255,7 @@ p::selection {
   .container {
     width: 1340px;
   }
+
   .main .container .content .items {
     display: grid;
     grid-template-columns: 310px 310px 310px;
@@ -229,28 +272,34 @@ p::selection {
     padding: 7px 0px 7px 10px;
     font-size: 0.8rem;
   }
+
   .main ul {
     position: sticky;
     top: 3rem;
     margin-top: 0;
   }
+
   .main .container .content .items .item {
     width: 190px;
     height: 260px;
   }
+
   .main .container .content .items {
     grid-template-columns: 200px 220px;
   }
+
   .main .container .content .items .item a {
     padding: 3px 11px;
     font-size: 1.1rem;
   }
+
   .arrow a {
     top: 5px;
     left: 6px;
     color: white;
     font-size: 0.9rem;
   }
+
   .arrow a svg {
     width: 14px;
     height: 19px;
